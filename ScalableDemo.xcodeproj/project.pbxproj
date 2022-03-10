@@ -10,7 +10,6 @@
 		96651C3B27DA61C4000C3FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C3A27DA61C4000C3FAE /* AppDelegate.swift */; };
 		96651C3D27DA61C4000C3FAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C3C27DA61C4000C3FAE /* SceneDelegate.swift */; };
 		96651C3F27DA61C4000C3FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C3E27DA61C4000C3FAE /* ViewController.swift */; };
-		96651C4227DA61C4000C3FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96651C4027DA61C4000C3FAE /* Main.storyboard */; };
 		96651C4427DA61CC000C3FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96651C4327DA61CC000C3FAE /* Assets.xcassets */; };
 		96651C4727DA61CC000C3FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96651C4527DA61CC000C3FAE /* LaunchScreen.storyboard */; };
 		96651C5227DA61CC000C3FAE /* ScalableDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C5127DA61CC000C3FAE /* ScalableDemoTests.swift */; };
@@ -39,7 +38,6 @@
 		96651C3A27DA61C4000C3FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96651C3C27DA61C4000C3FAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		96651C3E27DA61C4000C3FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		96651C4127DA61C4000C3FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96651C4327DA61CC000C3FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96651C4627DA61CC000C3FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96651C4827DA61CC000C3FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				96651C3A27DA61C4000C3FAE /* AppDelegate.swift */,
 				96651C3C27DA61C4000C3FAE /* SceneDelegate.swift */,
 				96651C3E27DA61C4000C3FAE /* ViewController.swift */,
-				96651C4027DA61C4000C3FAE /* Main.storyboard */,
 				96651C4327DA61CC000C3FAE /* Assets.xcassets */,
 				96651C4527DA61CC000C3FAE /* LaunchScreen.storyboard */,
 				96651C4827DA61CC000C3FAE /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				96651C4727DA61CC000C3FAE /* LaunchScreen.storyboard in Resources */,
 				96651C4427DA61CC000C3FAE /* Assets.xcassets in Resources */,
-				96651C4227DA61C4000C3FAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96651C4027DA61C4000C3FAE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96651C4127DA61C4000C3FAE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		96651C4527DA61CC000C3FAE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,6 +426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScalableDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,7 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.ScalableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,6 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScalableDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.ScalableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
