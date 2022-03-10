@@ -16,6 +16,7 @@
 		96651C5D27DA61CC000C3FAE /* ScalableDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C5C27DA61CC000C3FAE /* ScalableDemoUITests.swift */; };
 		96651C7F27DA6B52000C3FAE /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C7E27DA6B52000C3FAE /* DataProvider.swift */; };
 		96651C8427DA6C15000C3FAE /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C8327DA6C15000C3FAE /* URLManager.swift */; };
+		96651C8927DA6CD5000C3FAE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C8827DA6CD5000C3FAE /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		96651C5E27DA61CC000C3FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96651C7E27DA6B52000C3FAE /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		96651C8327DA6C15000C3FAE /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		96651C8827DA6CD5000C3FAE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				96651C7E27DA6B52000C3FAE /* DataProvider.swift */,
 				96651C8327DA6C15000C3FAE /* URLManager.swift */,
+				96651C8827DA6CD5000C3FAE /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96651C8927DA6CD5000C3FAE /* NetworkManager.swift in Sources */,
 				96651C3F27DA61C4000C3FAE /* ViewController.swift in Sources */,
 				96651C3B27DA61C4000C3FAE /* AppDelegate.swift in Sources */,
 				96651C7F27DA6B52000C3FAE /* DataProvider.swift in Sources */,
