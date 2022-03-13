@@ -58,7 +58,7 @@ class NetworkManager: DataProvider {
     
     // Checking the network connection before making requests
     private func checkNetwork() -> Bool {
-        var status = false
+        var status = true
         networkMonitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
                 status = true
