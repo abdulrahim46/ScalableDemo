@@ -23,12 +23,9 @@ class RepoViewModel {
             switch result {
             case .success(let repo):
                 completion(repo, nil)
-                //print(repo)
                 self?.repos = repo
             case .failure(let error):
-                //print(error)
                 completion(nil,error)
-               // AlertBuilder.failureAlertWithMessage(message: error.localizedDescription)
             }
         })
     }
