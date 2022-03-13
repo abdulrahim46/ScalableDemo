@@ -117,13 +117,12 @@
 		96651C3927DA61C4000C3FAE /* ScalableDemo */ = {
 			isa = PBXGroup;
 			children = (
+				96651C7C27DA6AD5000C3FAE /* Application */,
 				967D8FC527DDE7C200BF4AA8 /* Model */,
+				96651CC327DC0B6C000C3FAE /* View */,
 				967D8FBF27DDE6B900BF4AA8 /* ViewModel */,
 				96651CD527DC125C000C3FAE /* Common */,
-				96651CC327DC0B6C000C3FAE /* View */,
 				96651C7D27DA6AE5000C3FAE /* Network */,
-				96651C7C27DA6AD5000C3FAE /* Application */,
-				96651C3E27DA61C4000C3FAE /* ViewController.swift */,
 				96651C4327DA61CC000C3FAE /* Assets.xcassets */,
 				96651C4527DA61CC000C3FAE /* LaunchScreen.storyboard */,
 				96651C4827DA61CC000C3FAE /* Info.plist */,
@@ -171,6 +170,7 @@
 		96651CC327DC0B6C000C3FAE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96651C3E27DA61C4000C3FAE /* ViewController.swift */,
 				96651CC727DC0B7B000C3FAE /* Cell */,
 			);
 			path = View;

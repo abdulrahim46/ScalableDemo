@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Network
+import UIKit
 
 class NetworkManager: DataProvider {
     
@@ -15,8 +17,13 @@ class NetworkManager: DataProvider {
         case invalidData
     }
     
+    let networkMonitor = NWPathMonitor()
+    
     /// generic request for all apis
     func request<T: Codable>(urlName: ServiceURLType, expecting: T.Type, completion: @escaping(Result<T, Error>) -> Void) {
+        if !checkNetwork() {
+            return
+        }
         
         let urlString = URLManager.getUrlString(for: urlName)
         let completeUrl = URL(string: urlString)
@@ -25,7 +32,8 @@ class NetworkManager: DataProvider {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            self?.networkMonitor.cancel()
             guard let data = data else {
                 if let error = error {
                     completion(.failure(error))
@@ -46,5 +54,28 @@ class NetworkManager: DataProvider {
         
         task.resume()
         
+    }
+    
+    // Checking the network connection before making requests
+    private func checkNetwork() -> Bool {
+        var status = false
+        networkMonitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                status = true
+                // show something for expensive path from mobile network
+            } else {
+                status = false
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Warning!", message: "You do not have internet at the moment...", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+        
+        let queue = DispatchQueue(label: "InternetConnectionMonitor")
+        networkMonitor.start(queue: queue)
+        
+        return status
     }
 }
