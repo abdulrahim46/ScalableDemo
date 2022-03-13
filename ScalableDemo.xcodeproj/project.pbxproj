@@ -29,6 +29,7 @@
 		96A8FA1027DE6D8800483901 /* repo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A8FA0F27DE6D8800483901 /* repo.json */; };
 		96A8FA1A27DE6E7F00483901 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA1927DE6E7F00483901 /* Constants.swift */; };
 		96A8FA2527DE744D00483901 /* commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A8FA2427DE744D00483901 /* commits.json */; };
+		96A8FA2A27DE781600483901 /* RepoViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		96A8FA0F27DE6D8800483901 /* repo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = repo.json; sourceTree = "<group>"; };
 		96A8FA1927DE6E7F00483901 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96A8FA2427DE744D00483901 /* commits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = commits.json; sourceTree = "<group>"; };
+		96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewControllerUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			children = (
 				96651C5C27DA61CC000C3FAE /* ScalableDemoUITests.swift */,
 				96651C5E27DA61CC000C3FAE /* Info.plist */,
+				96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */,
 			);
 			path = ScalableDemoUITests;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A8FA2A27DE781600483901 /* RepoViewControllerUITests.swift in Sources */,
 				96651C5D27DA61CC000C3FAE /* ScalableDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
