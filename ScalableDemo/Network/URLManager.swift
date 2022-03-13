@@ -17,7 +17,7 @@ struct URLManager {
         case .repos:
             return kBaseURL + "/users/mralexgray/repos"
         case .commits(let name):
-            return kBaseURL + "/users/mralexgray/" + name
+            return kBaseURL + "/repos/mralexgray/" + name + "/commits"
         }
     }
     

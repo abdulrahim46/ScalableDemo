@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let viewModel: RepoViewModel
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -17,16 +18,22 @@ class ViewController: UIViewController {
         return tableView
     }()
     
-    let viewmodel = RepoViewModel()
-    var repo: [Repo]?
+    init(viewModel: RepoViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Github Repo"
         setupTableView()
         
-        viewmodel.getRepos(completion: { [weak self] repo, err in
-            self?.repo = repo
+        viewModel.getRepos(completion: { [weak self] repo, err in
+            //self?.repo = repo
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -55,7 +62,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repo?.count ?? 0
+        return viewModel.getRepoCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,12 +70,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as? RepoTableViewCell else {
             fatalError("Repo cell is not implemented")
         }
-        guard let repo = viewmodel.getRepo(index: indexPath.row) else {
+        guard let repo = viewModel.getRepo(index: indexPath.row) else {
             print("Repo data is not found!")
             return UITableViewCell()
         }
         cell.configureCell(repo: repo)
+        cell.configureCommit(repo: repo, vm: CommitsViewModel())
         return cell
+        
     }
     
     

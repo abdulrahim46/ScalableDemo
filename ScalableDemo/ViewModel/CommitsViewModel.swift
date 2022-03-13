@@ -17,11 +17,15 @@ class CommitsViewModel {
     }
     
     func getCommits(user: String, completion: @escaping ([Commits]?,Error?) -> Void) {
+        
+        let group = DispatchGroup()
+        group.enter()
+        
         apiResource.request(urlName: .commits(user), expecting: [Commits].self, completion: { [weak self] result in
+            group.leave()
             switch result {
             case .success(let commit):
                 completion(commit, nil)
-                print(commit)
                 self?.commits = commit
             case .failure(let error):
                 //print(error)

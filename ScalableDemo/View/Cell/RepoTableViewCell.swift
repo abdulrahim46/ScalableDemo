@@ -128,7 +128,6 @@ class RepoTableViewCell: UITableViewCell {
             lastCommitLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 20),
             lastCommitLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
             lastCommitLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
-            //lastCommitLabel.bottomAnchor.constraint(equalTo: stackView.topAnchor),
             
             stackView.topAnchor.constraint(equalTo: lastCommitLabel.bottomAnchor, constant: 10),
             stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
@@ -147,6 +146,18 @@ class RepoTableViewCell: UITableViewCell {
         starLabel.text = "Stars: " + String(repo.stars ?? 0)
         forkLabel.text = "Fork: "  + String(repo.forks ?? 0)
         langLabel.text = "Language: \(repo.language ?? "nil")"
+        lastCommitLabel.text = "Loading..."
+    }
+    
+    func configureCommit(repo: Repo, vm: CommitsViewModel) {
+        guard let name = repo.name else {
+            return
+        }
+        vm.getCommits(user: name, completion: { [weak self] result, err in
+            DispatchQueue.main.async {
+                self?.lastCommitLabel.text = "Last commit: \(result?.first?.sha ?? "nil")"
+            }
+        })
     }
     
     
@@ -159,6 +170,17 @@ class RepoTableViewCell: UITableViewCell {
         //containerView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
        // containerView.layer.shadowRadius = 6.0
         //containerView.layer.shadowOpacity = 0.7
+    }
+    
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        repoNameLabel.text = ""
+        descriptionLabel.text = ""
+        starLabel.text = ""
+        forkLabel.text = ""
+        langLabel.text = ""
+        lastCommitLabel.text = ""
     }
     
 }
