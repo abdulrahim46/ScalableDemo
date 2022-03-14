@@ -155,7 +155,7 @@ class RepoTableViewCell: UITableViewCell {
         }
         vm.getCommits(user: name, completion: { [weak self] result, err in
             DispatchQueue.main.async {
-                self?.lastCommitLabel.text = "Last commit: \(result?.first?.sha ?? "nil")"
+                self?.lastCommitLabel.text = "Last commit: \(vm.lastCommit)"
             }
         })
     }
@@ -164,8 +164,8 @@ class RepoTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         //containerView.backgroundColor = .white
         containerView.layer.cornerRadius = 10.0
-        containerView.layer.shouldRasterize = true
-        containerView.layer.rasterizationScale = UIScreen.main.scale
+//        containerView.layer.shouldRasterize = true
+//        containerView.layer.rasterizationScale = UIScreen.main.scale
         //containerView.layer.shadowColor = UIColor.gray.cgColor
         //containerView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
        // containerView.layer.shadowRadius = 6.0

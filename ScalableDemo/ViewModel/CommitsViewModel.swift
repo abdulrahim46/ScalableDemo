@@ -16,21 +16,22 @@ class CommitsViewModel {
         self.apiResource = apiResource
     }
     
+    // MARK: Fetch commits for specific repo
+    
     func getCommits(user: String, completion: @escaping ([Commits]?,Error?) -> Void) {
-        
+        /// using group of asynchronous operations
         let group = DispatchGroup()
         group.enter()
         
         apiResource.request(urlName: .commits(user), expecting: [Commits].self, completion: { [weak self] result in
-            group.leave()
             switch result {
             case .success(let commit):
                 completion(commit, nil)
+                group.leave()
                 self?.commits = commit
             case .failure(let error):
-                //print(error)
+                group.leave()
                 completion(nil,error)
-               // AlertBuilder.failureAlertWithMessage(message: error.localizedDescription)
             }
         })
     }

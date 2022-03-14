@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private let viewModel: RepoViewModel
+    private var loadingIndicator = UIActivityIndicatorView(style: .gray)
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -31,16 +32,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         title = "Github Repo"
         setupTableView()
-        
-        viewModel.getRepos(completion: { [weak self] repo, err in
-            //self?.repo = repo
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        })
+        setActvityIndicator()
+        viewModel.view = self
+        viewModel.getRepos()
     }
     
     //MARK: - UI Setup
+    
     private func setupTableView() {
         view.addSubview(tableView)
         
@@ -57,12 +55,25 @@ class ViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
+    private func setActvityIndicator() {
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loadingIndicator)
+        loadingIndicator.startAnimating()
+        NSLayoutConstraint.activate([
+            loadingIndicator.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingIndicator.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+    
 }
 
+//MARK: Tableview data source & delegate
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getRepoCount()
+        return viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,5 +92,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+// MARK:- Reload table view from vm
+
+extension ViewController: RepoViewProtocol {
+    
+    func reloadTableView() {
+        tableView.reloadData()
+        loadingIndicator.stopAnimating()
+    }
 }
 
