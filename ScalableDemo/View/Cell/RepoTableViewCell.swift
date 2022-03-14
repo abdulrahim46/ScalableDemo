@@ -155,7 +155,7 @@ class RepoTableViewCell: UITableViewCell {
         }
         vm.getCommits(user: name, completion: { [weak self] result, err in
             DispatchQueue.main.async {
-                self?.lastCommitLabel.text = "Last commit: \(vm.lastCommit)"
+                self?.lastCommitLabel.text = "Last commit: \(result?.first?.sha ?? "commit not found")"
             }
         })
     }

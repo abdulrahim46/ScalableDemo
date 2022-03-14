@@ -30,6 +30,7 @@
 		96A8FA1A27DE6E7F00483901 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA1927DE6E7F00483901 /* Constants.swift */; };
 		96A8FA2527DE744D00483901 /* commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A8FA2427DE744D00483901 /* commits.json */; };
 		96A8FA2A27DE781600483901 /* RepoViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */; };
+		96AB797F27DF921F00551CED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB797E27DF921F00551CED /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		96A8FA1927DE6E7F00483901 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96A8FA2427DE744D00483901 /* commits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = commits.json; sourceTree = "<group>"; };
 		96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewControllerUITests.swift; sourceTree = "<group>"; };
+		96AB797E27DF921F00551CED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		96651C3927DA61C4000C3FAE /* ScalableDemo */ = {
 			isa = PBXGroup;
 			children = (
+				96AB797D27DF920900551CED /* Coordinator */,
 				96651C7C27DA6AD5000C3FAE /* Application */,
 				967D8FC527DDE7C200BF4AA8 /* Model */,
 				96651CC327DC0B6C000C3FAE /* View */,
@@ -235,6 +238,14 @@
 				96A8FA2427DE744D00483901 /* commits.json */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		96AB797D27DF920900551CED /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96AB797E27DF921F00551CED /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +392,7 @@
 				96651CD127DC0BC1000C3FAE /* CardView.swift in Sources */,
 				96A8FA1A27DE6E7F00483901 /* Constants.swift in Sources */,
 				96651C3D27DA61C4000C3FAE /* SceneDelegate.swift in Sources */,
+				96AB797F27DF921F00551CED /* MainCoordinator.swift in Sources */,
 				967D8FD427DDEE6700BF4AA8 /* CommitsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
