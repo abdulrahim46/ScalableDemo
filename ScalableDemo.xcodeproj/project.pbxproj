@@ -23,7 +23,7 @@
 		967D8FC727DDE7CE00BF4AA8 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D8FC627DDE7CE00BF4AA8 /* Repo.swift */; };
 		967D8FCF27DDED8C00BF4AA8 /* Commits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D8FCE27DDED8C00BF4AA8 /* Commits.swift */; };
 		967D8FD427DDEE6700BF4AA8 /* CommitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D8FD327DDEE6700BF4AA8 /* CommitsViewModel.swift */; };
-		96A8FA0327DE684300483901 /* RepoCommitViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA0227DE684300483901 /* RepoCommitViewModelTests.swift */; };
+		96A8FA0327DE684300483901 /* RepoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA0227DE684300483901 /* RepoViewModelTests.swift */; };
 		96A8FA0B27DE6BF000483901 /* APIMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA0A27DE6BF000483901 /* APIMockService.swift */; };
 		96A8FA1027DE6D8800483901 /* repo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A8FA0F27DE6D8800483901 /* repo.json */; };
 		96A8FA1A27DE6E7F00483901 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA1927DE6E7F00483901 /* Constants.swift */; };
@@ -31,6 +31,7 @@
 		96A8FA2A27DE781600483901 /* RepoViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */; };
 		96AB797F27DF921F00551CED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB797E27DF921F00551CED /* MainCoordinator.swift */; };
 		96AB798D27E01F9B00551CED /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB798C27E01F9B00551CED /* ShadowView.swift */; };
+		96AB799B27E027AE00551CED /* CommitsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB799A27E027AE00551CED /* CommitsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +74,7 @@
 		967D8FC627DDE7CE00BF4AA8 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		967D8FCE27DDED8C00BF4AA8 /* Commits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commits.swift; sourceTree = "<group>"; };
 		967D8FD327DDEE6700BF4AA8 /* CommitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewModel.swift; sourceTree = "<group>"; };
-		96A8FA0227DE684300483901 /* RepoCommitViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCommitViewModelTests.swift; sourceTree = "<group>"; };
+		96A8FA0227DE684300483901 /* RepoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModelTests.swift; sourceTree = "<group>"; };
 		96A8FA0A27DE6BF000483901 /* APIMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMockService.swift; sourceTree = "<group>"; };
 		96A8FA0F27DE6D8800483901 /* repo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = repo.json; sourceTree = "<group>"; };
 		96A8FA1927DE6E7F00483901 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewControllerUITests.swift; sourceTree = "<group>"; };
 		96AB797E27DF921F00551CED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		96AB798C27E01F9B00551CED /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		96AB799A27E027AE00551CED /* CommitsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +153,8 @@
 				96A8FA0127DE67DA00483901 /* Mocks */,
 				96651C5127DA61CC000C3FAE /* ScalableDemoTests.swift */,
 				96651C5327DA61CC000C3FAE /* Info.plist */,
-				96A8FA0227DE684300483901 /* RepoCommitViewModelTests.swift */,
+				96A8FA0227DE684300483901 /* RepoViewModelTests.swift */,
+				96AB799A27E027AE00551CED /* CommitsViewModelTests.swift */,
 			);
 			path = ScalableDemoTests;
 			sourceTree = "<group>";
@@ -401,7 +404,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A8FA0327DE684300483901 /* RepoCommitViewModelTests.swift in Sources */,
+				96A8FA0327DE684300483901 /* RepoViewModelTests.swift in Sources */,
+				96AB799B27E027AE00551CED /* CommitsViewModelTests.swift in Sources */,
 				96A8FA0B27DE6BF000483901 /* APIMockService.swift in Sources */,
 				96651C5227DA61CC000C3FAE /* ScalableDemoTests.swift in Sources */,
 			);
@@ -565,7 +569,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HQGYL87RGL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ScalableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -585,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HQGYL87RGL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ScalableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
