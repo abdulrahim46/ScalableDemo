@@ -18,7 +18,6 @@
 		96651C8427DA6C15000C3FAE /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C8327DA6C15000C3FAE /* URLManager.swift */; };
 		96651C8927DA6CD5000C3FAE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651C8827DA6CD5000C3FAE /* NetworkManager.swift */; };
 		96651CC927DC0BA2000C3FAE /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651CC827DC0BA2000C3FAE /* RepoTableViewCell.swift */; };
-		96651CD127DC0BC1000C3FAE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651CD027DC0BC1000C3FAE /* CardView.swift */; };
 		96651CD727DC1272000C3FAE /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96651CD627DC1272000C3FAE /* UIView+Ext.swift */; };
 		967D8FC127DDE6CC00BF4AA8 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D8FC027DDE6CC00BF4AA8 /* RepoViewModel.swift */; };
 		967D8FC727DDE7CE00BF4AA8 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D8FC627DDE7CE00BF4AA8 /* Repo.swift */; };
@@ -31,6 +30,7 @@
 		96A8FA2527DE744D00483901 /* commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A8FA2427DE744D00483901 /* commits.json */; };
 		96A8FA2A27DE781600483901 /* RepoViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */; };
 		96AB797F27DF921F00551CED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB797E27DF921F00551CED /* MainCoordinator.swift */; };
+		96AB798D27E01F9B00551CED /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB798C27E01F9B00551CED /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,6 @@
 		96651C8327DA6C15000C3FAE /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		96651C8827DA6CD5000C3FAE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		96651CC827DC0BA2000C3FAE /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
-		96651CD027DC0BC1000C3FAE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		96651CD627DC1272000C3FAE /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		967D8FC027DDE6CC00BF4AA8 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
 		967D8FC627DDE7CE00BF4AA8 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		96A8FA2427DE744D00483901 /* commits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = commits.json; sourceTree = "<group>"; };
 		96A8FA2927DE781600483901 /* RepoViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewControllerUITests.swift; sourceTree = "<group>"; };
 		96AB797E27DF921F00551CED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		96AB798C27E01F9B00551CED /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				96651CC827DC0BA2000C3FAE /* RepoTableViewCell.swift */,
-				96651CD027DC0BC1000C3FAE /* CardView.swift */,
+				96AB798C27E01F9B00551CED /* ShadowView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -388,8 +388,8 @@
 				96651CC927DC0BA2000C3FAE /* RepoTableViewCell.swift in Sources */,
 				96651CD727DC1272000C3FAE /* UIView+Ext.swift in Sources */,
 				96651C7F27DA6B52000C3FAE /* DataProvider.swift in Sources */,
+				96AB798D27E01F9B00551CED /* ShadowView.swift in Sources */,
 				96651C8427DA6C15000C3FAE /* URLManager.swift in Sources */,
-				96651CD127DC0BC1000C3FAE /* CardView.swift in Sources */,
 				96A8FA1A27DE6E7F00483901 /* Constants.swift in Sources */,
 				96651C3D27DA61C4000C3FAE /* SceneDelegate.swift in Sources */,
 				96AB797F27DF921F00551CED /* MainCoordinator.swift in Sources */,
@@ -565,6 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQGYL87RGL;
 				INFOPLIST_FILE = ScalableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -584,6 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQGYL87RGL;
 				INFOPLIST_FILE = ScalableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

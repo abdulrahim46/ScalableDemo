@@ -13,9 +13,10 @@ class RepoTableViewCell: UITableViewCell {
     
     static let identifier = "RepoTableViewCell"
     
-    lazy var containerView: UIView = {
-        let view = UIView()
+    lazy var containerView: ShadowView = {
+        let view = ShadowView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
         return view
     }()
     
@@ -84,7 +85,7 @@ class RepoTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //selectionStyle = .none
+        selectionStyle = .none
         setupViews()
     }
     
@@ -107,7 +108,6 @@ class RepoTableViewCell: UITableViewCell {
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
         ])
-        containerView.backgroundColor = .lightGray
     }
     
     private func setupLabels() {
@@ -159,19 +159,6 @@ class RepoTableViewCell: UITableViewCell {
             }
         })
     }
-    
-    
-    override func layoutSubviews() {
-        //containerView.backgroundColor = .white
-        containerView.layer.cornerRadius = 10.0
-//        containerView.layer.shouldRasterize = true
-//        containerView.layer.rasterizationScale = UIScreen.main.scale
-        //containerView.layer.shadowColor = UIColor.gray.cgColor
-        //containerView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-       // containerView.layer.shadowRadius = 6.0
-        //containerView.layer.shadowOpacity = 0.7
-    }
-    
     
     override func prepareForReuse() {
         super.prepareForReuse()
