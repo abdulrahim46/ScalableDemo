@@ -9,8 +9,8 @@ import Foundation
 
 
 struct URLManager {
-    
-    static let kBaseURL = "https://api.github.com"
+
+    static let kBaseURL = Constants.baseURL // Todo: make a config file for this
     
     static func getUrlString(for serviceEnum: ServiceURLType)-> String {
         switch serviceEnum {
